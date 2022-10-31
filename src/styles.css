@@ -1,0 +1,39 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 96px;
+  line-height: none;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+}
+
+.header-button {
+  display: grid;
+  margin: auto;
+  background-color: #f28705;
+  border-radius: 30px;
+  border-color: #f28705;
+  color: white;
+  font-size: 18px;
+  padding: 16px 32px;
+}
