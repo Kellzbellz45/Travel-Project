@@ -7,23 +7,79 @@ body {
   margin: 0 auto;
 }
 
+.grid {
+  display: grid;
+  grid-gap: 64px;
+}
+
 .img-responsive {
   max-width: 100%;
+  display: block;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-3-columns-with-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.card {
+  background: white;
+  margin: 30px 0;
+  box-shadow: 20px 20px 40px rgba(198, 198, 198, 0.2);
+}
+
+.card-body {
+  padding: 0 30px 30px;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
+
+.page-button {
+  display: grid;
+  margin: auto;
+
+  background-color: #f28705;
+  border-radius: 30px;
+  border-color: #f28705;
+  color: white;
+  font-size: 18px;
+  padding: 16px 117px;
+  transition: all 200ms ease-in-out;
+}
+
+.page-button:hover {
+  background-color: #0598aa;
+  border-color: #0598aa;
+  color: white;
+}
+
+section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+section.secondary {
+  background: #f8f8f8;
 }
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/friend-banner-2.png");
-  background-position: center !important;
-  max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  position: relative;
   color: white;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 200px 0;
 }
 
 .header-1 {
@@ -102,6 +158,30 @@ header {
 
 .intro-section-description p {
   font-weight: 400;
+}
+
+.secondary {
+  background: #f8f8f8;
+}
+
+.text-center-1 {
+  text-align: center;
+  font-weight: 400;
+  color: #707070;
+}
+
+.text-center-2 {
+  text-align: center;
+  font-weight: 700;
+  color: #025159;
+}
+
+.card-body h3 {
+  color: #025159;
+}
+
+.card-body p {
+  color: #707070;
 }
 
 footer {
@@ -187,5 +267,24 @@ a :hover {
 
   .Links-col-2 {
     padding-bottom: 20px;
+  }
+
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .secondary {
+    padding-left: 0px;
+  }
+
+  .card {
+    background: white;
+    margin: 10px 0;
+    box-shadow: 20px 20px 40px rgba(198, 198, 198, 0.2);
+  }
+
+  .card-body {
+    padding: 20px;
   }
 }
