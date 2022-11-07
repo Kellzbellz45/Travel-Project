@@ -7,6 +7,10 @@ body {
   margin: 0 auto;
 }
 
+.img-responsive {
+  max-width: 100%;
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/friend-banner-2.png");
@@ -74,8 +78,9 @@ header {
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 100px;
+  padding-left: 50px;
   padding-right: 50px;
+
   color: white;
 
   display: grid;
@@ -84,7 +89,7 @@ header {
 }
 
 .intro-section-description {
-  padding-top: 70px;
+  padding-right: 50px;
 }
 
 .intro-section-description h3 {
@@ -142,7 +147,7 @@ a :hover {
   text-align: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1278px) {
   header {
     padding: 200px 0;
     position: relative;
@@ -161,19 +166,12 @@ a :hover {
   }
 
   .intro-section {
-    background-image: url("../images/intro-section-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center !important;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 20px;
-
-    color: white;
-
-    display: grid;
     grid-template-columns: 1fr;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-gap: 0px;
   }
 
   .footer-container {
