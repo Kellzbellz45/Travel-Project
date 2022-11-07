@@ -9,7 +9,7 @@ body {
 
 .grid {
   display: grid;
-  grid-gap: 64px;
+  grid-gap: 364px;
 }
 
 .img-responsive {
@@ -33,6 +33,7 @@ body {
   background: white;
   margin: 30px 0;
   box-shadow: 20px 20px 40px rgba(198, 198, 198, 0.2);
+  justify-content: center;
 }
 
 .card-body {
@@ -227,7 +228,7 @@ a :hover {
   text-align: center;
 }
 
-@media (max-width: 1278px) {
+@media (max-width: 960px) {
   header {
     padding: 200px 0;
     position: relative;
