@@ -186,6 +186,26 @@ header {
   color: #707070;
 }
 
+.images {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.row-1 {
+  margin-left: 70px;
+}
+
+.row-2 {
+  margin-left: 70px;
+  padding-top: 90px;
+}
+
 footer {
   padding-top: 115px;
   padding-bottom: 115px;
@@ -222,6 +242,7 @@ a :hover {
   padding-right: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
+  grid-gap: 30px;
 }
 
 .disclaimer {
