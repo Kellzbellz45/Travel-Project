@@ -8,10 +8,43 @@ body {
   margin: 0 auto;
 }
 
-.text-center {
+/* Desktop Subheadings*/
+
+.text-center-1 {
   text-align: center;
+  color: #707070;
+  font-size: 24px;
+  font-weight: 500;
 }
-/* Grid-properties*/
+
+.text-center-2 {
+  text-align: center;
+  color: #025159;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.text-center-3 {
+  text-align: left;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.text-center-4 {
+  text-align: left;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.text-center-5 {
+  text-align: left;
+  color: white;
+  font-size: 14px;
+}
+
+/* Desktop Grid-properties*/
 .grid {
   display: grid;
   grid-gap: 64px;
@@ -40,6 +73,7 @@ body {
   grid-template-columns: 1fr 2fr 2fr;
 }
 
+/* Desktop Cards*/
 .card {
   background: white;
   margin: 30px 0;
@@ -61,7 +95,7 @@ body {
   color: white;
   text-align: center;
   font-size: 16px;
-  padding: 16px 100px;
+  padding: 16px 120px;
   transition: all 200ms ease-in-out;
 }
 
@@ -70,6 +104,8 @@ body {
   border-color: #0598aa;
   color: white;
 }
+
+/* Sections Overall*/
 
 section {
   max-width: 100%;
@@ -130,6 +166,8 @@ header h3 {
   transition: all 200ms ease-in-out;
 }
 
+/*Main sections start here*/
+
 main {
   background: white;
 }
@@ -147,8 +185,7 @@ main p {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
-  color: #272044;
-  opacity: 0.7;
+  color: white;
 }
 
 .header-button:hover {
@@ -156,6 +193,8 @@ main p {
   border-color: #0598aa;
   color: white;
 }
+
+/*Intro Section*/
 
 .intro-section {
   background-image: url("../images/intro-section-bg.png");
@@ -198,18 +237,6 @@ main p {
   text-align: center;
 }
 
-.text-center {
-  text-align: center;
-  font-weight: 400;
-  color: #707070;
-}
-
-.text-center {
-  text-align: center;
-  font-weight: 700;
-  color: #025159;
-}
-
 /*Desktop-Cards*/
 
 .card {
@@ -239,6 +266,8 @@ main p {
 }
 
 .map {
+  padding-top: 40px;
+  padding-bottom: 50px;
   max-width: 100%;
 }
 
@@ -290,8 +319,50 @@ a :hover {
 /*MOBILE*/
 
 @media (max-width: 960px) {
-  /*Mobile-Grid-Properties*/
+  body {
+    margin: 0 auto !important;
+  }
 
+  /*Mobile-Subheadings*/
+
+  .text-center-1 {
+    text-align: center;
+    color: #707070;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .text-center-2 {
+    text-align: center;
+    color: #025159;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .text-center-3 {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .text-center-4 {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .text-center-5 {
+    text-align: left;
+    color: white;
+    font-size: 14px;
+  }
+
+  .secondary-section-title {
+    padding-top: 30px;
+  }
+  /*Mobile-Header*/
   header h1 {
     font-weight: 700;
     font-size: 32px;
@@ -302,7 +373,7 @@ a :hover {
 
   header h2 {
     font-weight: 100 !important;
-    font-size: 18px;
+    font-size: 24px;
     margin: 30px 0;
     text-align: center;
     color: white;
@@ -310,16 +381,19 @@ a :hover {
 
   header h3 {
     font-weight: 100px;
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 5px;
     margin: 0px;
     text-align: center;
     color: white;
   }
 
+  /*Mobile-Grids*/
+
   body {
     margin: 0 auto !important;
   }
+
   .grid {
     display: grid;
     grid-gap: 24px;
@@ -351,6 +425,8 @@ a :hover {
     grid-gap: 24px;
   }
 
+  /*Mobile-Sections*/
+
   section {
     max-width: 100%;
     margin: 0 auto;
@@ -378,11 +454,11 @@ a :hover {
     padding-bottom: 50px;
   }
 
-  /*Desktop-map*/
-
   .section-third {
     margin: 0px auto;
   }
+
+  /*Mobile-footer*/
 
   footer {
     padding-top: 50px;
