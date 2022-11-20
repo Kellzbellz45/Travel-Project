@@ -9,8 +9,7 @@ body {
 }
 
 .text-center {
-  text-align: left;
-  max-width: 320px;
+  text-align: center;
 }
 /* Grid-properties*/
 .grid {
@@ -293,20 +292,37 @@ a :hover {
 @media (max-width: 960px) {
   /*Mobile-Grid-Properties*/
 
-  body {
-    margin: 0px;
-  }
-
-  .text-center {
-    font-weight: 400;
-    color: #707070;
-    margin-right: 0px !important;
-  }
-
-  .text-center {
+  header h1 {
     font-weight: 700;
-    color: #025159;
+    font-size: 32px;
+    margin: 30px 0;
+    text-align: center;
+    color: white;
+  }
+
+  header h2 {
+    font-weight: 100 !important;
+    font-size: 18px;
+    margin: 30px 0;
+    text-align: center;
+    color: white;
+  }
+
+  header h3 {
+    font-weight: 100px;
+    font-size: 12px;
+    letter-spacing: 5px;
     margin: 0px;
+    text-align: center;
+    color: white;
+  }
+
+  body {
+    margin: 0 auto !important;
+  }
+  .grid {
+    display: grid;
+    grid-gap: 24px;
   }
 
   .img-responsive {
@@ -314,34 +330,35 @@ a :hover {
     display: block;
   }
 
-  header {
-    padding: 60px 0;
-    padding-top: 100px;
-    padding-bottom: 100px;
+  .grid-2-columns {
+    grid-template-columns: 1fr;
+    margin: 0 auto !important;
+    margin-right: 0 auto !important;
+    background-color: teal;
   }
 
-  header h1 {
-    font-size: 48px;
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+    margin: 0 auto !important;
+    margin-right: 0 auto !important;
   }
 
-  header h2 {
-    font-size: 20px;
+  .footer-container {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
   }
 
-  header h3 {
-    font-size: 12px;
+  section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 24px;
   }
 
-  .intro-section {
-    padding-left: 12px;
-  }
-
-  .card-body h3 {
-    font-size: 18px;
-  }
-
-  .card-body p {
-    font-size: 14px;
+  section.secondary {
+    background: #f8f8f8;
   }
 
   .page-button {
@@ -352,94 +369,31 @@ a :hover {
     color: white;
     text-align: center;
     font-size: 16px;
-    padding: 16px 90px;
+    padding: 16px 120px;
     transition: all 200ms ease-in-out;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-  }
-
-  .grid-2-columns {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-3-columns {
-    grid-template-columns: 1fr;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  section {
-    margin: 0px;
-    padding: 12px;
+  .images {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
-  .friends {
-    max-width: 300px;
+  /*Desktop-map*/
+
+  .section-third {
+    margin: 0px auto;
   }
 
-  .description {
-    margin-top: 20px;
-    max-width: 320px;
-  }
-  .card {
-    max-width: 320px;
-  }
-
-  section.gallery {
-    margin: 0px;
-  }
-
-  .img-grid {
-    display: block;
-    padding-top: 12px;
-    max-width: 320px;
-    margin-right: 0px !important;
-  }
-
-  section.map {
-    margin: 0px;
+  footer {
     padding-top: 50px;
     padding-bottom: 50px;
-    max-width: 300px;
-  }
+    padding-left: 24px;
+    padding-right: 24px;
 
-  .embed {
-    display: block;
-    max-width: 300px;
-    padding-top: 12px;
-  }
-
-  .footer-container {
-    padding: 0px;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 12px;
-  }
-
-  .website-description {
-    padding-right: 20px;
-  }
-
-  .diclaimer {
-    padding-left: 0 !important;
-  }
-
-  .Links-col-1 {
-    padding-bottom: 20px;
-  }
-
-  .Links-col-2 {
-    padding-bottom: 20px;
-  }
-
-  .hidden-mobile {
-    display: none;
+    color: white;
+    background-image: linear-gradient(rgba(2, 81, 89, 1), rgba(0, 0, 0, 0.7)),
+      url("../images/bali-footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
