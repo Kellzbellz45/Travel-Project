@@ -8,10 +8,14 @@ body {
   margin: 0 auto;
 }
 
+.text-center {
+  text-align: left;
+  max-width: 320px;
+}
 /* Grid-properties*/
 .grid {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 64px;
 }
 
 .img-responsive {
@@ -21,19 +25,64 @@ body {
 
 .grid-2-columns {
   grid-template-columns: 1fr 1fr;
+  margin: 0 auto !important;
+  margin-right: 0 auto !important;
+
+  background-color: teal;
 }
 
 .grid-3-columns {
   grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto !important;
+  margin-right: 0 auto !important;
+}
+
+.grid-3-columns-with-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.card {
+  background: white;
+  margin: 30px 0;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
+
+.page-button {
+  display: block;
+  background-color: #f28705;
+  border-radius: 30px;
+  border-color: #f28705;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 100px;
+  transition: all 200ms ease-in-out;
+}
+
+.page-button:hover {
+  background-color: #0598aa;
+  border-color: #0598aa;
+  color: white;
+}
+
+section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+section.secondary {
+  background: #f8f8f8;
 }
 
 /*Header section*/
-
-section {
-  margin-top: 50px;
-  max-width: 100%;
-  margin: 0 auto;
-}
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -45,7 +94,7 @@ header {
   padding: 200px 0;
 }
 
-.header-1 {
+header h1 {
   font-weight: 700;
   font-size: 96px;
   margin: 30px 0;
@@ -53,7 +102,7 @@ header {
   color: white;
 }
 
-.header-2 {
+header h2 {
   font-weight: 100 !important;
   font-size: 40px;
   margin: 30px 0;
@@ -61,7 +110,7 @@ header {
   color: white;
 }
 
-.header-3 {
+header h3 {
   font-weight: 100px;
   font-size: 24px;
   letter-spacing: 5px;
@@ -82,6 +131,27 @@ header {
   transition: all 200ms ease-in-out;
 }
 
+main {
+  background: white;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 24px;
+
+  color: #272044;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
+}
+
 .header-button:hover {
   background-color: #0598aa;
   border-color: #0598aa;
@@ -94,11 +164,12 @@ header {
   background-size: cover;
   background-position: center !important;
   max-width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+
   color: white;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -128,13 +199,13 @@ header {
   text-align: center;
 }
 
-.text-center-1 {
+.text-center {
   text-align: center;
   font-weight: 400;
   color: #707070;
 }
 
-.text-center-2 {
+.text-center {
   text-align: center;
   font-weight: 700;
   color: #025159;
@@ -145,7 +216,6 @@ header {
 .card {
   background: white;
   box-shadow: 20px 20px 40px rgba(198, 198, 198, 0.2);
-  max-width: 370px;
 }
 
 .card-body h3 {
@@ -156,33 +226,6 @@ header {
   color: #707070;
 }
 
-.card-body {
-  padding: 0 30px 30px;
-}
-
-.card-footer {
-  padding: 0 30px 30px;
-}
-
-.page-button {
-  display: grid;
-  margin: auto;
-
-  background-color: #f28705;
-  border-radius: 30px;
-  border-color: #f28705;
-  color: white;
-  font-size: 18px;
-  padding: 16px 117px;
-  transition: all 200ms ease-in-out;
-}
-
-.page-button:hover {
-  background-color: #0598aa;
-  border-color: #0598aa;
-  color: white;
-}
-
 /*Desktop-Image Gallery*/
 
 .images {
@@ -190,23 +233,10 @@ header {
   padding-bottom: 50px;
 }
 
-.gallery {
-  margin: 50px auto;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.image {
-  text-align: center;
-  max-width: 370px;
-}
-
 /*Desktop-map*/
 
 .section-third {
-  margin: 50px auto;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0px auto;
 }
 
 .map {
@@ -256,150 +286,149 @@ a :hover {
 
 .disclaimer {
   padding-top: 20px;
-  text-align: center;
 }
 
 /*MOBILE*/
 
 @media (max-width: 960px) {
   /*Mobile-Grid-Properties*/
-  .grid-3-columns {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
+
+  body {
+    margin: 0px;
   }
 
-  /*Mobile-Header*/
-
-  header {
-    padding: 200px 0;
-    position: relative;
+  .text-center {
+    font-weight: 400;
+    color: #707070;
+    margin-right: 0px !important;
   }
 
-  .header-1 {
-    font-size: 48px;
+  .text-center {
+    font-weight: 700;
+    color: #025159;
+    margin: 0px;
   }
 
-  .header-2 {
-    font-size: 20px;
-  }
-
-  .header-3 {
-    font-size: 24px;
-  }
-
-  /*Mobile-Why Friendtip section*/
-
-  .intro-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white;
-
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .intro-section-description {
-    text-align: center;
-    padding-right: 0px;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  section.secondary-cards {
-    background: #f8f8f8;
-  }
-
-  /*Mobile-Cards*/
-  section.secondary-cards {
-    background: #f8f8f8;
-    max-width: 100%;
-    margin: 10px auto;
-    margin-left: 10px;
-    margin-right: 0px;
-  }
-
-  .secondary-section-title {
-    text-align: center;
-  }
-
-  .card {
-    background: white;
-    box-shadow: 20px 20px 40px rgba(198, 198, 198, 0.2);
-    max-width: 320px;
-  }
-
-  .image-responsive {
+  .img-responsive {
     max-width: 100%;
     display: block;
   }
 
-  .card-body {
-    padding: 20px;
+  header {
+    padding: 60px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3 {
+    font-size: 12px;
+  }
+
+  .intro-section {
+    padding-left: 12px;
+  }
+
+  .card-body h3 {
+    font-size: 18px;
+  }
+
+  .card-body p {
+    font-size: 14px;
   }
 
   .page-button {
-    display: grid;
-
+    display: block;
     background-color: #f28705;
     border-radius: 30px;
     border-color: #f28705;
     color: white;
+    text-align: center;
     font-size: 16px;
-    padding: 16px 100px;
+    padding: 16px 90px;
     transition: all 200ms ease-in-out;
   }
 
-  /*Mobile-Image-Gallery*/
-
-  .text-center-1 {
-    text-align: center;
-    font-weight: 400;
-    color: #707070;
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
   }
 
-  .text-center-2 {
-    text-align: center;
-    font-weight: 700;
-    color: #025159;
+  .grid-2-columns {
+    grid-template-columns: 1fr;
   }
 
-  .gallery {
-    margin: 20px auto;
-    margin-left: 20px;
-    margin-right: 20px;
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
-  .gallery-grid {
-    grid-gap: 20px;
+  section {
+    margin: 0px;
+    padding: 12px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  .image {
+  .friends {
+    max-width: 300px;
+  }
+
+  .description {
+    margin-top: 20px;
+    max-width: 320px;
+  }
+  .card {
     max-width: 320px;
   }
 
-  /*Desktop-map*/
-
-  .section-third {
-    margin: 20px auto;
-    margin-left: 20px;
-    margin-right: 20px;
+  section.gallery {
+    margin: 0px;
   }
 
-  .map {
+  .img-grid {
+    display: block;
+    padding-top: 12px;
     max-width: 320px;
+    margin-right: 0px !important;
   }
 
-  /*Mobile-Footer*/
+  section.map {
+    margin: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 300px;
+  }
+
+  .embed {
+    display: block;
+    max-width: 300px;
+    padding-top: 12px;
+  }
 
   .footer-container {
-    padding-left: 10px;
-    padding-right: 0px;
+    padding: 0px;
     display: grid;
     grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .website-description {
+    padding-right: 20px;
+  }
+
+  .diclaimer {
+    padding-left: 0 !important;
   }
 
   .Links-col-1 {
@@ -408,5 +437,9 @@ a :hover {
 
   .Links-col-2 {
     padding-bottom: 20px;
+  }
+
+  .hidden-mobile {
+    display: none;
   }
 }
